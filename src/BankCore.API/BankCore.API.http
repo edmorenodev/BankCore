@@ -1,0 +1,6 @@
+@BankCore.API_HostAddress = http://localhost:5023
+
+GET {{BankCore.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

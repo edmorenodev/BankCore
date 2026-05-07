@@ -1,0 +1,11 @@
+D:\BankCore\src\BankCore.Application\bin\Debug\net10.0\BankCore.Application.deps.json
+D:\BankCore\src\BankCore.Application\bin\Debug\net10.0\BankCore.Application.dll
+D:\BankCore\src\BankCore.Application\bin\Debug\net10.0\BankCore.Application.pdb
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.AssemblyInfoInputs.cache
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.AssemblyInfo.cs
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.csproj.CoreCompileInputs.cache
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.dll
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\refint\BankCore.Application.dll
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.pdb
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\ref\BankCore.Application.dll
