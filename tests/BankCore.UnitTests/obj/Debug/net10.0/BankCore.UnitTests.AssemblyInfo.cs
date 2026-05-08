@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BankCore.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08d95398ee27650d0ba8770f627a6772631a5519")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed2c48f6bb49304fffa8bade28a9f277ed7edf6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BankCore.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BankCore.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

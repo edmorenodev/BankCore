@@ -1,3 +1,5 @@
+using BankCore.Domain.Shared;
+
 namespace BankCore.Domain.Accounts;
 
 public class Account
@@ -7,7 +9,7 @@ public class Account
     public Guid OwnerId { get; private set; }
     public AccountType Type { get; private set; }
     public AccountStatus Status { get; private set; }
-    public decimal Balance { get; private set; }
+    public Money Balance { get; private set; }
     public string Currency { get; private set; } = default!;
     public DateTime OpenedAt { get; private set; }
     public DateTime? LastMovementAt { get; private set; }
@@ -25,40 +27,40 @@ public class Account
             OwnerId = ownerId,
             Type = type,
             Status = AccountStatus.Active,
-            Balance = 0,
+            Balance = Money.Zero(currency),
             Currency = currency,
             OpenedAt = DateTime.UtcNow
         };
     }
 
-    public void Debit(decimal amount)
+    public void Debit(Money amount)
     {
         EnsureIsActive();
 
-        if (amount <= 0)
+        if (amount.Amount <= 0)
         {
             throw new InvalidOperationException("El monto a debitar debe ser mayor a 0");
         }
 
-        if (Balance < amount)
+        if (amount.IsGreaterThan(Balance))
         {
-            throw new InvalidOperationException("Saldo insuficiente");
+            throw new InvalidOperationException("El monto a debitar no debe exceder el saldo de la cuenta.");
         }
 
-        Balance -= amount;
+        Balance = Balance.Subtract(amount);
         LastMovementAt = DateTime.UtcNow;
     }
 
-    public void Credit(decimal amount)
+    public void Credit(Money amount)
     {
         EnsureIsActive();
 
-        if (amount <= 0)
+        if (amount.Amount <= 0)
         {
             throw new InvalidOperationException("El monto a acreditar debe ser mayor a 0");
         }
 
-        Balance += amount;
+        Balance = Balance.Add(amount);
         LastMovementAt = DateTime.UtcNow;
     }
 
@@ -74,8 +76,10 @@ public class Account
 
     public void Close()
     {
-        if (Balance > 0)
+        if (Balance.Amount > 0)
+        {
             throw new InvalidOperationException("No se puede cerrar una cuenta con saldo.");
+        }
 
         Status = AccountStatus.Closed;
     }

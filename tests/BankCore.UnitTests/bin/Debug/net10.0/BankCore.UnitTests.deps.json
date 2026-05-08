@@ -8,11 +8,21 @@
     ".NETCoreApp,Version=v10.0": {
       "BankCore.UnitTests/1.0.0": {
         "dependencies": {
+          "BankCore.Domain": "1.0.0",
+          "FluentAssertions": "8.9.0",
           "Microsoft.NET.Test.Sdk": "17.14.1",
           "xunit": "2.9.3"
         },
         "runtime": {
           "BankCore.UnitTests.dll": {}
+        }
+      },
+      "FluentAssertions/8.9.0": {
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "assemblyVersion": "8.9.0.0",
+            "fileVersion": "8.9.0.0"
+          }
         }
       },
       "Microsoft.CodeCoverage/17.14.1": {
@@ -329,6 +339,14 @@
             "fileVersion": "2.9.3.0"
           }
         }
+      },
+      "BankCore.Domain/1.0.0": {
+        "runtime": {
+          "BankCore.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -337,6 +355,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentAssertions/8.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y5RDjxaVlxWX2yy0X/ay1tJjSKMOtjepSb83mmfngFS63hm3LsoZNj6nhmImzm1ifRmpF9ouvmHjx9nNwnkpDg==",
+      "path": "fluentassertions/8.9.0",
+      "hashPath": "fluentassertions.8.9.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.14.1": {
       "type": "package",
@@ -414,6 +439,11 @@
       "sha512": "sha512-yMb6vMESlSrE3Wfj7V6cjQ3S4TXdXpRqYeNEI3zsX31uTsGMJjEw6oD5F5u1cHnMptjhEECnmZSsPxB6ChZHDQ==",
       "path": "xunit.extensibility.execution/2.9.3",
       "hashPath": "xunit.extensibility.execution.2.9.3.nupkg.sha512"
+    },
+    "BankCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

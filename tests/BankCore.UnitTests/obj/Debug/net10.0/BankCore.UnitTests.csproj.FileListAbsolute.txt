@@ -97,3 +97,6 @@ D:\BankCore\tests\BankCore.UnitTests\obj\Debug\net10.0\ref\BankCore.UnitTests.dl
 D:\BankCore\tests\BankCore.UnitTests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_BankCore.UnitTests
 D:\BankCore\tests\BankCore.UnitTests\bin\Debug\net10.0\CoverletSourceRootsMapping_BankCore.UnitTests
 D:\BankCore\tests\BankCore.UnitTests\obj\Debug\net10.0\BankCore.UnitTests.sourcelink.json
+D:\BankCore\tests\BankCore.UnitTests\bin\Debug\net10.0\FluentAssertions.dll
+D:\BankCore\tests\BankCore.UnitTests\bin\Debug\net10.0\BankCore.Domain.dll
+D:\BankCore\tests\BankCore.UnitTests\bin\Debug\net10.0\BankCore.Domain.pdb
