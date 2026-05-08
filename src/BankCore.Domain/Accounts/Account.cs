@@ -1,8 +1,9 @@
 using BankCore.Domain.Shared;
+using BankCore.Domain.Accounts.Events;
 
 namespace BankCore.Domain.Accounts;
 
-public class Account
+public class Account : Entity
 {
     public Guid Id { get; private set; }
     public string AccountNumber { get; private set; } = default!;
@@ -20,7 +21,7 @@ public class Account
 
     public static Account Open(Guid ownerId, AccountType type, string currency)
     {
-        return new Account
+        var account = new Account
         {
             Id = Guid.NewGuid(),
             AccountNumber = GenerateAccountNumber(),
@@ -31,6 +32,15 @@ public class Account
             Currency = currency,
             OpenedAt = DateTime.UtcNow
         };
+
+        account.RaiseDomainEvent(new AccountOpened(
+            account.Id,
+            account.OwnerId,
+            account.AccountNumber,
+            account.Currency
+        ));
+
+        return account;
     }
 
     public void Debit(Money amount)
@@ -49,6 +59,8 @@ public class Account
 
         Balance = Balance.Subtract(amount);
         LastMovementAt = DateTime.UtcNow;
+
+        RaiseDomainEvent(new MoneyDebited(Id, amount.Amount, amount.Currency));
     }
 
     public void Credit(Money amount)
@@ -62,6 +74,8 @@ public class Account
 
         Balance = Balance.Add(amount);
         LastMovementAt = DateTime.UtcNow;
+
+        RaiseDomainEvent(new MoneyDebited(Id, amount.Amount, amount.Currency));
     }
 
     public void Block()
