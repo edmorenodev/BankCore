@@ -9,3 +9,4 @@ D:\BankCore\src\BankCore.Domain\obj\Debug\net10.0\BankCore.Domain.dll
 D:\BankCore\src\BankCore.Domain\obj\Debug\net10.0\refint\BankCore.Domain.dll
 D:\BankCore\src\BankCore.Domain\obj\Debug\net10.0\BankCore.Domain.pdb
 D:\BankCore\src\BankCore.Domain\obj\Debug\net10.0\ref\BankCore.Domain.dll
+D:\BankCore\src\BankCore.Domain\obj\Debug\net10.0\BankCore.Domain.sourcelink.json

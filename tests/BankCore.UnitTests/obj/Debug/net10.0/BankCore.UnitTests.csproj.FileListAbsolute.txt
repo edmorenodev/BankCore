@@ -94,3 +94,6 @@ D:\BankCore\tests\BankCore.UnitTests\obj\Debug\net10.0\refint\BankCore.UnitTests
 D:\BankCore\tests\BankCore.UnitTests\obj\Debug\net10.0\BankCore.UnitTests.pdb
 D:\BankCore\tests\BankCore.UnitTests\obj\Debug\net10.0\BankCore.UnitTests.genruntimeconfig.cache
 D:\BankCore\tests\BankCore.UnitTests\obj\Debug\net10.0\ref\BankCore.UnitTests.dll
+D:\BankCore\tests\BankCore.UnitTests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_BankCore.UnitTests
+D:\BankCore\tests\BankCore.UnitTests\bin\Debug\net10.0\CoverletSourceRootsMapping_BankCore.UnitTests
+D:\BankCore\tests\BankCore.UnitTests\obj\Debug\net10.0\BankCore.UnitTests.sourcelink.json

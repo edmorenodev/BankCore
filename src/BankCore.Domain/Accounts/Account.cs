@@ -72,6 +72,14 @@ public class Account
         Status = AccountStatus.Blocked;
     }
 
+    public void Close()
+    {
+        if (Balance > 0)
+            throw new InvalidOperationException("No se puede cerrar una cuenta con saldo.");
+
+        Status = AccountStatus.Closed;
+    }
+
     private void EnsureIsActive()
     {
         if (Status == AccountStatus.Blocked)
