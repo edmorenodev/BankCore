@@ -10,7 +10,7 @@ public class Account : Entity
     public Guid OwnerId { get; private set; }
     public AccountType Type { get; private set; }
     public AccountStatus Status { get; private set; }
-    public Money Balance { get; private set; }
+    public Money Balance { get; private set; } = default!;
     public string Currency { get; private set; } = default!;
     public DateTime OpenedAt { get; private set; }
     public DateTime? LastMovementAt { get; private set; }
