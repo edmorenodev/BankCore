@@ -9,3 +9,5 @@ D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.dll
 D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\refint\BankCore.Application.dll
 D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.pdb
 D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\ref\BankCore.Application.dll
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.csproj.AssemblyReference.cache
+D:\BankCore\src\BankCore.Application\obj\Debug\net10.0\BankCore.Application.sourcelink.json

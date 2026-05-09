@@ -173,6 +173,16 @@
             "related": ".xml"
           }
         }
+      },
+      "BankCore.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/BankCore.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankCore.Domain.dll": {}
+        }
       }
     }
   },
@@ -456,10 +466,16 @@
         "microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
+    },
+    "BankCore.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BankCore.Domain/BankCore.Domain.csproj",
+      "msbuildProject": "../BankCore.Domain/BankCore.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "BankCore.Domain >= 1.0.0",
       "FluentValidation >= 12.1.1",
       "FluentValidation.DependencyInjectionExtensions >= 12.1.1",
       "MediatR >= 14.1.0",
@@ -498,7 +514,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\BankCore\\src\\BankCore.Domain\\BankCore.Domain.csproj": {
+              "projectPath": "D:\\BankCore\\src\\BankCore.Domain\\BankCore.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
