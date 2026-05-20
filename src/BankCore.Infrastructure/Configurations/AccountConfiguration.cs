@@ -52,7 +52,7 @@ public sealed class AccountConfiguration : IEntityTypeConfiguration<Account>
         builder.Property(a => a.LastMovementAt);
 
         builder.Property(a => a.Version)
-            .IsRowVersion();
+            .IsConcurrencyToken();
 
         // Ignorar los domain events porque no se guardan en esta tabla
         builder.Ignore(a => a.DomainEvents);

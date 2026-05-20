@@ -56,7 +56,6 @@ namespace BankCore.Infrastructure.Migrations
 
                     b.Property<long>("Version")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");

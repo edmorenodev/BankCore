@@ -25,7 +25,7 @@ namespace BankCore.Infrastructure.Migrations
                     Account_Currency = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OpenedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastMovementAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Version = table.Column<long>(type: "bigint", rowVersion: true, nullable: false)
+                    Version = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
