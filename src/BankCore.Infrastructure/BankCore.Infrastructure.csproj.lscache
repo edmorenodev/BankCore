@@ -56,13 +56,18 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 [sourceFiles]
 Configurations/AccountConfiguration.cs
 DependencyInjection.cs
+Migrations/
+ 20260518002949_InitialCreate.cs
+ 20260518002949_InitialCreate.Designer.cs
+ AppDbContextModelSnapshot.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  BankCore.Infrastructure.AssemblyInfo.cs
  BankCore.Infrastructure.GlobalUsings.g.cs
-Persistence/
- Context/AppDbContext.cs
- Repositories/AccountRepository.cs
+Persistence/Context/
+ AppDbContext.cs
+ AppDbContextFactory.cs
+Persistence/Repositories/AccountRepository.cs
 
 [metadataReferences]
 ../BankCore.Domain/obj/Debug/net10.0/ref/BankCore.Domain.dll

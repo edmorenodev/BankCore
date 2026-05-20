@@ -9,3 +9,10 @@ D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\BankCore.Infrastructur
 D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\refint\BankCore.Infrastructure.dll
 D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\BankCore.Infrastructure.pdb
 D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\ref\BankCore.Infrastructure.dll
+D:\BankCore\src\BankCore.Infrastructure\bin\Debug\net10.0\BankCore.Infrastructure.runtimeconfig.json
+D:\BankCore\src\BankCore.Infrastructure\bin\Debug\net10.0\BankCore.Domain.dll
+D:\BankCore\src\BankCore.Infrastructure\bin\Debug\net10.0\BankCore.Domain.pdb
+D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\BankCore.Infrastructure.csproj.AssemblyReference.cache
+D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\BankCore.Infrastructure.sourcelink.json
+D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\BankCore.21E4E763.Up2Date
+D:\BankCore\src\BankCore.Infrastructure\obj\Debug\net10.0\BankCore.Infrastructure.genruntimeconfig.cache

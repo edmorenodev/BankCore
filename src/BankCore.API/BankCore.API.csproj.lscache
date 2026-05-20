@@ -439,6 +439,9 @@ Program.cs
  Microsoft.CodeAnalysis.NetAnalyzers.dll
 <NUGET>/
  microsoft.aspnetcore.openapi/10.0.7/analyzers/dotnet/cs/Microsoft.AspNetCore.OpenApi.SourceGenerators.dll
+ microsoft.codeanalysis.analyzers/3.11.0/analyzers/dotnet/cs/
+  Microsoft.CodeAnalysis.Analyzers.dll
+  Microsoft.CodeAnalysis.CSharp.Analyzers.dll
  microsoft.entityframeworkcore.analyzers/10.0.8/analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll
  system.clientmodel/1.5.1/analyzers/dotnet/cs/System.ClientModel.SourceGeneration.dll
 
