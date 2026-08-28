@@ -75,7 +75,7 @@ public class Account : Entity
         Balance = Balance.Add(amount);
         LastMovementAt = DateTime.UtcNow;
 
-        RaiseDomainEvent(new MoneyDebited(Id, amount.Amount, amount.Currency));
+        RaiseDomainEvent(new MoneyCredited(Id, amount.Amount, amount.Currency));
     }
 
     public void Block()

@@ -1,6 +1,6 @@
 using BankCore.Domain.Shared;
 
-namespace BankCore.Domain.Shared;
+namespace BankCore.Domain.Accounts.Events;
 
 public sealed class AccountOpened : DomainEvent
 {
