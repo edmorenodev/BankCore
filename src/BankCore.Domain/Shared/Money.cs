@@ -27,7 +27,7 @@ public sealed class Money
 
     private static readonly HashSet<string> ValidCurrencies = ["MXN", "USD", "EUR"];
 
-    private Money() { }
+    private Money() { Currency = null!; }
 
     public Money(decimal amount, string currency)
     {
