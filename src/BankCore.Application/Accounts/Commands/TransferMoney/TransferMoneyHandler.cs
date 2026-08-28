@@ -24,7 +24,7 @@ public sealed class TransferMoneyHandler : IRequestHandler<TransferMoneyCommand,
         if (source is null)
             throw new KeyNotFoundException($"Cuenta origen {request.SourceAccountId} no encontrada.");
 
-        var destination = await _accountRepository.GetByIdAsync(request.DestinationAccountId);
+        var destination = await _accountRepository.GetByIdAsync(request.DestinationAccountId, cancellationToken);
 
         if(destination is null)
             throw new KeyNotFoundException($"Cuenta destino {request.DestinationAccountId} no encontrada");
