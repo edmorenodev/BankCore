@@ -1,50 +1,50 @@
 # BankCore
 
-API REST bancaria construida en .NET 10 con Clean Architecture, DDD y CQRS. Proyecto de práctica para demostrar el diseño de sistemas orientados al dominio.
+REST API for banking operations built with .NET 10, Clean Architecture, DDD and CQRS.
 
-## Tecnologías
+## Tech Stack
 
 - **.NET 10** / ASP.NET Core
 - **Entity Framework Core 10** + SQL Server
-- **MediatR 14** — implementación de CQRS
-- **FluentValidation 12** — validación de comandos
-- **xUnit + FluentAssertions** — pruebas unitarias
+- **MediatR 14** for CQRS
+- **FluentValidation 12** for command validation
+- **xUnit + FluentAssertions** for unit testing
 
-## Arquitectura
+## Architecture
 
 ```
 BankCore/
 ├── src/
-│   ├── BankCore.Domain          # Entidades, value objects, eventos de dominio
+│   ├── BankCore.Domain          # Entities, value objects, domain events
 │   ├── BankCore.Application     # Commands, Queries, Validators, Pipeline Behaviors
-│   ├── BankCore.Infrastructure  # EF Core, repositorios, configuración
+│   ├── BankCore.Infrastructure  # EF Core, repositories, configuration
 │   └── BankCore.API             # Controllers, Program.cs
 └── tests/
-    └── BankCore.UnitTests       # Pruebas unitarias del dominio
+    └── BankCore.UnitTests       # Domain unit tests
 ```
 
-El proyecto sigue **Clean Architecture**: las capas internas no dependen de las externas. El dominio no conoce nada de infraestructura ni de la API.
+Follows **Clean Architecture**: inner layers have no dependency on outer layers. The domain knows nothing about infrastructure or the API.
 
-## Dominio
+## Domain
 
-La entidad central es `Account` (cuenta bancaria), modelada como **Aggregate Root**:
+The core entity is `Account`, modeled as an **Aggregate Root**:
 
-- `Account.Open()` — abre una cuenta nueva con saldo cero
-- `Account.Credit()` — acredita dinero y emite `MoneyCredited`
-- `Account.Debit()` — debita dinero con validación de saldo y emite `MoneyDebited`
-- `Account.Block()` / `Account.Close()` — gestión del ciclo de vida
+- `Account.Open()` opens a new account with zero balance
+- `Account.Credit()` credits money and raises `MoneyCredited`
+- `Account.Debit()` debits money with balance validation and raises `MoneyDebited`
+- `Account.Block()` / `Account.Close()` manage the account lifecycle
 
-El valor monetario está encapsulado en el **Value Object** `Money`, que previene operaciones entre monedas distintas y montos negativos.
+Monetary values are encapsulated in the **Value Object** `Money`, which prevents operations between different currencies and negative amounts.
 
 ## Endpoints
 
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| `POST` | `/api/accounts` | Abrir cuenta |
-| `GET` | `/api/accounts/{id}` | Consultar cuenta por ID |
-| `POST` | `/api/accounts/transfer` | Transferir dinero entre cuentas |
+| Method | Route | Description |
+|--------|-------|-------------|
+| `POST` | `/api/accounts` | Open account |
+| `GET` | `/api/accounts/{id}` | Get account by ID |
+| `POST` | `/api/accounts/transfer` | Transfer money between accounts |
 
-### Ejemplo — Abrir cuenta
+### Example: Open account
 
 ```http
 POST /api/accounts
@@ -57,39 +57,39 @@ Content-Type: application/json
 }
 ```
 
-Monedas soportadas: `MXN`, `USD`, `EUR`  
-Tipos de cuenta: `Checking` (débito), `Savings` (ahorro)
+Supported currencies: `MXN`, `USD`, `EUR`  
+Account types: `Checking`, `Savings`
 
-## Ejecutar localmente
+## Running locally
 
-**Requisitos:** .NET 10 SDK, SQL Server o LocalDB
+**Requirements:** .NET 10 SDK, SQL Server or LocalDB
 
 ```bash
-# 1. Clonar el repositorio
+# 1. Clone the repository
 git clone https://github.com/edmorenodev/BankCore.git
 cd BankCore
 
-# 2. Aplicar migraciones
+# 2. Apply migrations
 dotnet ef database update --project src/BankCore.Infrastructure --startup-project src/BankCore.API
 
-# 3. Ejecutar la API
+# 3. Run the API
 dotnet run --project src/BankCore.API
 ```
 
-La API queda disponible en `http://localhost:5023`. Swagger en `/swagger`.
+API available at `http://localhost:5023`. Swagger at `/swagger`.
 
-## Pruebas
+## Tests
 
 ```bash
 dotnet test
 ```
 
-19 pruebas unitarias sobre el dominio: `Account`, `Money` y eventos de dominio.
+19 unit tests covering the domain: `Account`, `Money` and domain events.
 
-## Patrones aplicados
+## Patterns applied
 
-- **Clean Architecture** — separación en capas con dependencias hacia adentro
-- **Domain-Driven Design** — Aggregate Root, Value Object, Domain Events
-- **CQRS** con MediatR — comandos y queries separados
-- **Repository + Unit of Work** — abstracción de persistencia
-- **Pipeline Behaviors** — logging y validación transversal sin contaminar los handlers
+- **Clean Architecture** layered dependencies pointing inward
+- **Domain-Driven Design** Aggregate Root, Value Object, Domain Events
+- **CQRS** with MediatR, commands and queries separated
+- **Repository + Unit of Work** persistence abstraction
+- **Pipeline Behaviors** cross-cutting logging and validation without polluting handlers
