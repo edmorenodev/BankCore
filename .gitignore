@@ -1,0 +1,42 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.usertasks
+*.DotSettings.user
+
+## IDE
+.idea/
+.vs/
+*.swp
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!**/packages/build/
+
+## Rider
+.idea/
+
+## Secrets
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+## OS
+.DS_Store
+Thumbs.db
