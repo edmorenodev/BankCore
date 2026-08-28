@@ -1,6 +1,44 @@
 @BankCore.API_HostAddress = http://localhost:5023
 
-GET {{BankCore.API_HostAddress}}/weatherforecast/
+### Abrir cuenta de débito en MXN
+POST {{BankCore.API_HostAddress}}/api/accounts
+Content-Type: application/json
+
+{
+  "ownerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "accountType": "Checking",
+  "currency": "MXN"
+}
+
+###
+
+### Abrir cuenta de ahorros en USD
+POST {{BankCore.API_HostAddress}}/api/accounts
+Content-Type: application/json
+
+{
+  "ownerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "accountType": "Savings",
+  "currency": "USD"
+}
+
+###
+
+### Consultar cuenta por ID
+GET {{BankCore.API_HostAddress}}/api/accounts/00000000-0000-0000-0000-000000000000
 Accept: application/json
+
+###
+
+### Transferir dinero entre cuentas
+POST {{BankCore.API_HostAddress}}/api/accounts/transfer
+Content-Type: application/json
+
+{
+  "sourceAccountId": "00000000-0000-0000-0000-000000000000",
+  "destinationAccountId": "00000000-0000-0000-0000-000000000001",
+  "amount": 500.00,
+  "currency": "MXN"
+}
 
 ###
